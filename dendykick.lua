@@ -50,23 +50,21 @@ toggle.Text = "START"
 toggle.BackgroundColor3 = Color3.fromRGB(0, 180, 0)
 toggle.TextColor3 = Color3.new(1, 1, 1)
 
-[3] FUNGSI REJOIN / KICK PAKSA (UNTUK ROLLBACK DATA)
+-- [3] FUNGSI REJOIN / KICK PAKSA (UNTUK ROLLBACK DATA)
+-- local function Rejoin()
+--     -- Memutus jaringan secara instan agar server tidak sempat menyimpan status inventaris yang berkurang
+--     player:Kick("DC DULU BOS") 
+    
+--     task.wait(3)
+--     TPService:Teleport(game.PlaceId, player)
+-- end
+
 local function Rejoin()
-    -- Memutus jaringan secara instan agar server tidak sempat menyimpan status inventaris yang berkurang
     player:Kick("DC DULU BOS") 
     
     task.wait(3)
     TPService:Teleport(game.PlaceId, player)
 end
-
--- local function Rejoin()
---     task.wait(2)
-
---     pcall(function()
---         player:Kick()
---         TeleportService:Teleport(game.PlaceId, player)
---     end)
--- end
 
 -- [4] TOMBOL START / STOP TOGGLE
 toggle.MouseButton1Click:Connect(function()
