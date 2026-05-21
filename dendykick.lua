@@ -14,7 +14,7 @@ local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
 local isRunning = false
-local giftDelay = 3 -- Jeda sangat singkat (detik) setelah menaruh item sebelum langsung Kick/Relog
+local giftDelay = 0.05 -- Jeda sangat singkat (detik) setelah menaruh item sebelum langsung Kick/Relog
 
 -- [1] MATIKAN BGM GAME (BYPASS AUDIO)
 task.spawn(function()
@@ -62,7 +62,7 @@ toggle.TextColor3 = Color3.new(1, 1, 1)
 local function Rejoin()
     player:Kick("DC DULU BOS") 
     
-    task.wait(3)
+    task.wait(0.05)
     TPService:Teleport(game.PlaceId, player)
 end
 
